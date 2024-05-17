@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 public class PostReplyRequest {
 
     private String content;
-    private String postId;
+    private String tweetId;
     private LocalDateTime createdAt;
     private String image;
 

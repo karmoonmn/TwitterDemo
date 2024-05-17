@@ -48,7 +48,8 @@ public class Post {
     private Post replyFor;
 
     private boolean isReply;
-    private boolean isPost;
+    private boolean notAReply;
+    private boolean chat;
 
     private LocalDateTime CreatedAt;
 
