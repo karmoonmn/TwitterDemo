@@ -23,7 +23,8 @@ public interface CommentRepo extends MongoRepository<Comment, String> {
     @Query("{ 'post' : { $ref: 'posts', $id: ?0 } }")
     List<Comment> findByPostId(ObjectId post);
 
-    List<Comment> findByUser(User user);
+    @Query("{ 'user' : { $ref: 'users', $id: ?0 } }")
+    List<Comment> findByUser(ObjectId user);
 
 //    void deleteByParentCommentId(Comment parentId);
 }

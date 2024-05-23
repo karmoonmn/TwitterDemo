@@ -78,7 +78,7 @@ public class CommentController {
     }
 
     @GetMapping("/{postId}")
-    public ResponseEntity<List<CommentDto>> getCommentsByPostId
+    public ResponseEntity<List<CommentDto>> getAllCommentsByPostId
             (@PathVariable String postId, @RequestHeader("Authorization") String jwt)
             throws UserException, PostException, CommentException {
         User user = userService.findUserProfileByJwt(jwt);
@@ -102,7 +102,7 @@ public class CommentController {
     }
 
     @GetMapping("/")
-    public ResponseEntity<List<CommentDto>> getAllComments(
+    public ResponseEntity<List<CommentDto>> getAllCommentsByUser(
             @RequestHeader("Authorization") String jwt)
             throws UserException, PostException {
         User user = userService.findUserProfileByJwt(jwt);

@@ -95,7 +95,7 @@ public class CommentServiceImp implements CommentService {
 
     @Override
     public List<Comment> findAllComments(User user) {
-        return commentRepository.findAll();
+        return commentRepository.findByUser(new ObjectId(user.getId()));
     }
 
     @Override
