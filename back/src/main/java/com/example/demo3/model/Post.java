@@ -52,6 +52,9 @@ public class Post {
 
     private LocalDateTime CreatedAt;
 
+    @JsonIgnore
+    @DBRef
+    private List<Comment> comments = new ArrayList<>();
 }
 
 

@@ -28,5 +28,6 @@ public class PostDto {
     private List<String> repostUsersId;
     private List<PostDto> replyPosts;
     private Set<String> tags;
+    private List<CommentDto> comments;
 
 }
