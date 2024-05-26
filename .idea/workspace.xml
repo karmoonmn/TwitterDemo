@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1cb7bfc-97ff-43bf-9a09-c99c701f60b6" name="Changes" comment="ok">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/Controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/Controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/service/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/service/UserServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/Controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/Controller/PostController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/model/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/model/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/repo/PostRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/repo/PostRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/PostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/PostServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/PostServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/UserServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/UserServiceImp.class" afterDir="false" />
-    </list>
+    <list default="true" id="f1cb7bfc-97ff-43bf-9a09-c99c701f60b6" name="Changes" comment="ok" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,7 +90,17 @@
       <workItem from="1716100698178" duration="1346000" />
       <workItem from="1716183400134" duration="19000" />
       <workItem from="1716184000452" duration="98000" />
+      <workItem from="1716715506347" duration="335000" />
     </task>
+    <task id="LOCAL-00001" summary="ok">
+      <option name="closed" value="true" />
+      <created>1716715792013</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716715792013</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
