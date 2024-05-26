@@ -12,10 +12,6 @@ public interface PostService {
 
     public Post createPost(Post req, User user) throws UserException;
 
-    public Post createChat(Post req, User user) throws UserException;
-
-    public List<Post> findAllChat(User user) throws UserException;
-
     public List<Post> findAllPost(User user) throws UserException;
 
     public Post repost(String postId, User user) throws UserException, PostException;

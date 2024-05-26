@@ -58,6 +58,7 @@ public class PostController {
         return new ResponseEntity<>(postDtos, HttpStatus.OK);
     }
 
+    //TODO: linkedlist (post1 -> post2 -> post3)
     //TODO: logic for creating reply post
     @PostMapping("/reply")
     public ResponseEntity<PostDto> replyPost(
@@ -96,32 +97,6 @@ public class PostController {
         PostDto postDto = PostDtoMapper.toPostDto(post, user);
         return new ResponseEntity<>(postDto, HttpStatus.CREATED);
     }
-
-    @PostMapping("/create/chat")
-    public ResponseEntity<PostDto> createChat(
-            @RequestBody Post req, @RequestHeader("Authorization") String jwt)
-            throws UserException, PostException {
-        User user = userService.findUserProfileByJwt(jwt);
-
-        Post post = postService.createChat(req, user);
-
-        PostDto postDto = PostDtoMapper.toPostDto(post, user);
-        return new ResponseEntity<>(postDto, HttpStatus.CREATED);
-    }
-
-    @GetMapping("/chat")
-    public ResponseEntity<List<PostDto>> getAllChats(
-            @RequestHeader("Authorization") String jwt)
-            throws UserException, PostException {
-        User user = userService.findUserProfileByJwt(jwt);
-
-        List<Post> posts = postService.findAllChat(user);
-        List<PostDto> postDtos = PostDtoMapper.toPostDtos(posts, user);
-
-        return new ResponseEntity<>(postDtos, HttpStatus.OK);
-    }
-
-
 
     @PutMapping("/{postId}/repost")
     public ResponseEntity<PostDto> repost(

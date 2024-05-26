@@ -1,18 +1,21 @@
 package com.example.demo3.mapper;
 
+import com.example.demo3.DTO.CommentDto;
 import com.example.demo3.DTO.PostDto;
 import com.example.demo3.DTO.UserDto;
+import com.example.demo3.model.Comment;
 import com.example.demo3.model.Post;
 import com.example.demo3.model.User;
 import com.example.demo3.util.PostUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PostDtoMapper {
 
     public static PostDto toPostDto(Post post, User reqUser) {
-        UserDto user = UserDtoMapper.toUserDto(post.getUser());
+        UserDto user = UserDtoMapper.toUserDto(reqUser);
 
         boolean isLiked = PostUtil.isLikedByReqUser(reqUser, post);
         boolean isRepost = PostUtil.isRepostByReqUser(reqUser, post);
@@ -79,6 +82,5 @@ public class PostDtoMapper {
 
         return postDto;
     }
-
 
 }

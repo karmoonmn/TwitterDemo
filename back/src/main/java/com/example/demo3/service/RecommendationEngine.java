@@ -56,7 +56,7 @@ public class RecommendationEngine {
             return Integer.compare(priority2, priority1);
         });
 
-        List<Post> allPosts = postRepository.findPostByNotAReplyIsTrueOrderByCreatedAtDesc(user);
+        List<Post> allPosts = postRepository.findAll();
         allPosts.forEach(postsPriority::offer);
 
         List<Post> recommendedPost = new ArrayList<>();
@@ -70,7 +70,7 @@ public class RecommendationEngine {
         int maxWeight = post.getTags().stream()
                 .mapToInt(tag -> tagInterest.getOrDefault(tag, 0))
                 .max()
-                .orElse(1);
+                .orElse(0);
         return maxWeight * post.getLikes().size();
     }
 

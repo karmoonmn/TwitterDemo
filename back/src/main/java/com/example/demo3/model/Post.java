@@ -48,11 +48,13 @@ public class Post {
     private Post replyFor;
 
     private boolean isReply;
-    private boolean notAReply;
-    private boolean chat;
+    private boolean isPost;
 
     private LocalDateTime CreatedAt;
 
+    @JsonIgnore
+    @DBRef
+    private List<Comment> comments = new ArrayList<>();
 }
 
 

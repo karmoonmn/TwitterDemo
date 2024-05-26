@@ -9,8 +9,11 @@ import java.util.Set;
 
 public interface PostRepo extends MongoRepository<Post, String> {
 
+    List<Post> findAllByPostIsTrueOrderByCreatedAtDesc();
 
-//    List<Post> findByLikesContainingOrderByCreatedAtDesc(User user);
+    List<Post> findByRepostContainsOrUserIdAndPostIsTrueOrderByCreatedAtDesc(User user, String userId);
+
+    List<Post> findByLikesContainingOrderByCreatedAtDesc(User user);
 
     List<Post> findAllByLikes(String userId);
 
@@ -19,8 +22,4 @@ public interface PostRepo extends MongoRepository<Post, String> {
     List<Post> findByTags(String tags);
 
     List<Post> findByContentContaining(String text);
-
-    List<Post> findPostByNotAReplyIsTrueOrderByCreatedAtDesc(User user);
-
-    List<Post> findPostByChatIsTrueOrderByCreatedAtDesc(User user);
 }

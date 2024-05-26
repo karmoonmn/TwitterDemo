@@ -29,38 +29,17 @@ public class PostServiceImp implements PostService{
         post.setImage(req.getImage());
         post.setUser(user);
         post.setReply(false);
-        post.setNotAReply(true);
-        post.setChat(false);
+        post.setPost(true);
         post.setVideo(req.getVideo());
         post.setTags(req.getTags());
 
         return postRepo.save(post);
-    }
-
-    @Override
-    public Post createChat(Post req, User user) throws UserException {
-        Post post = new Post();
-        post.setContent(req.getContent());
-        post.setCreatedAt(LocalDateTime.now());
-        post.setImage(req.getImage());
-        post.setUser(user);
-        post.setReply(false);
-        post.setNotAReply(false);
-        post.setChat(true);
-        post.setVideo(req.getVideo());
-        post.setTags(req.getTags());
-
-        return postRepo.save(post);
-    }
-
-    @Override
-    public List<Post> findAllChat(User user) throws UserException {
-        return postRepo.findPostByChatIsTrueOrderByCreatedAtDesc(user);
     }
 
     @Override
     public List<Post> findAllPost(User user) {
         return recommendationEngine.recommendPost(user);
+//        return postRepository.findAllByPostIsTrueOrderByCreatedAtDesc();
     }
 
     @Override
@@ -98,7 +77,7 @@ public class PostServiceImp implements PostService{
     @Override
     public Post createdReply(PostReplyRequest req, User user) throws PostException {
 
-        Post replyFor = findById(req.getTweetId());
+        Post replyFor = findById(req.getPostId());
 
         Post post = new Post();
         post.setContent(req.getContent());
@@ -106,13 +85,10 @@ public class PostServiceImp implements PostService{
         post.setImage(req.getImage());
         post.setUser(user);
         post.setReply(true);
-        post.setNotAReply(false);
-        post.setChat(false);
+        post.setPost(false);
         post.setReplyFor(replyFor);
 
         Post saveReply = postRepo.save(post);
-        replyFor.getReplies().add(saveReply);
-        postRepo.save(saveReply);
         postRepo.save(replyFor);
 
         return replyFor;
@@ -129,11 +105,13 @@ public class PostServiceImp implements PostService{
     }
 
 
+    //TODO: find posts by tags
     @Override
     public List<Post> findByTag(String tag) {
         return postRepo.findByTags(tag);
     }
 
+    //TODO: find posts by text
     @Override
     public List<Post> findByText(String text) {
         return postRepo.findByContentContaining(text);
