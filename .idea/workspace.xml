@@ -4,56 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1cb7bfc-97ff-43bf-9a09-c99c701f60b6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f1cb7bfc-97ff-43bf-9a09-c99c701f60b6" name="Changes" comment="ok">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/Controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/Controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/model/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/repo/PostRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/repo/PostRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/request/PostReplyRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/request/PostReplyRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/service/PostServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/service/PostServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/service/RecommendationEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/service/RecommendationEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/Controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/Controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/service/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/demo3/service/UserServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/Controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/Controller/PostController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/Controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/DTO/LikeDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/DTO/LikeDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/DTO/PostDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/DTO/PostDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/DTO/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/DTO/UserDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/Demo3Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/Demo3Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/config/AppConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/config/AppConfig$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/config/JwtAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/config/JwtAuthenticationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/config/JwtProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/config/JwtProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/config/JwtService.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/config/JwtService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/exception/GlobalException.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/exception/GlobalException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/exception/PostException.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/exception/PostException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/exception/UserException.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/exception/UserException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/mapper/LikeDtoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/mapper/LikeDtoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/mapper/PostDtoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/mapper/PostDtoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/mapper/UserDtoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/mapper/UserDtoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/model/Like.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/model/Like.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/model/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/model/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/model/Tag.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/model/Tag.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/model/Verification.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/model/Verification.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/repo/LikeRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/repo/LikeRepo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/repo/PostRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/repo/PostRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/repo/TagRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/repo/TagRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/repo/UserRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/repo/UserRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/request/PostReplyRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/request/PostReplyRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/request/UserRegisterReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/request/UserRegisterReq.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/response/ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/response/ApiResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/response/AuthResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/response/AuthResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/CustomUserDetailsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/LikeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/LikeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/LikeServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/LikeServiceImp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/PostService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/PostServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/PostServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/RecommendationEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/RecommendationEngine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/TagService.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/TagService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/UserServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/service/UserServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/util/PostUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/util/PostUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/demo3/util/UserUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/demo3/util/UserUtil.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +33,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/karmoonmn/TwitterDemo.git&quot;,
-    &quot;accountId&quot;: &quot;e5cbb2bd-8eab-42d4-a231-76d1d89d2815&quot;
+    &quot;accountId&quot;: &quot;255d7fcb-cd85-4bcc-b993-20a3818dfc48&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -94,6 +55,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Spring Boot.Demo3Application.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/karmoonngo/Downloads/TwitterDemo&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -117,8 +79,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
       </set>
     </attachedChunks>
   </component>
@@ -135,11 +97,19 @@
       <workItem from="1715844767034" duration="4221000" />
       <workItem from="1715867963658" duration="8621000" />
       <workItem from="1715909581853" duration="1665000" />
+      <workItem from="1716019691900" duration="27102000" />
+      <workItem from="1716100698178" duration="1346000" />
+      <workItem from="1716183400134" duration="19000" />
+      <workItem from="1716184000452" duration="98000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="ok" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -39,7 +39,7 @@ public class UserServiceImp implements UserService {
     public User updateUser(String userId, User req) throws UserException {
         User user = findUserById(userId);
 
-        if (req.getEmail() != null) {
+        if (req.getFullName() != null) {
             user.setFullName(req.getFullName());
         }
 
