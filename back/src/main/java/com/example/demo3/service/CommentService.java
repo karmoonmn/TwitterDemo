@@ -54,12 +54,11 @@ public interface CommentService {
      * Deletes a specific comment.
      *
      * @param id The ID of the comment to delete.
-     * @param user The ID of the user who created the comment (for authorization).
      * @throws PostException If the comment with the provided ID is not found.
      * @throws UserException If the user trying to delete the comment is not authorized to do so.
      * @throws CommentException If there's an issue specific to comment deletion (e.g., trying to delete a non-existent comment).
      */
-    public void deleteComment(String id, String user) throws PostException, UserException, CommentException;
+    public Comment deleteComment(String id) throws PostException, UserException, CommentException;
 
     public List<Comment> findAllComments(User user);
 

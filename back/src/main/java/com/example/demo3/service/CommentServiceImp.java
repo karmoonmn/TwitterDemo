@@ -99,15 +99,12 @@ public class CommentServiceImp implements CommentService {
     }
 
     @Override
-    public void deleteComment(String id, String user) throws PostException, UserException, CommentException {
+    public Comment deleteComment(String id) throws PostException, UserException, CommentException {
         Comment comment = commentRepository.findById(id)
                 .orElseThrow(() -> new CommentException("Comment with ID " + id + " not found"));
 
-        if (!comment.getUser().getId().equals(user)) {
-            throw new UserException("Unauthorized to delete comment");
-        }
         comment.setCommentText("");
-        commentRepository.save(comment);
+        return commentRepository.save(comment);
     }
 
 }
