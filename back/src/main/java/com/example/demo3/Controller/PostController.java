@@ -114,9 +114,10 @@ public class PostController {
     public ResponseEntity<PostDto> findPostById(
             @PathVariable String postId, @RequestHeader("Authorization") String jwt)
             throws UserException, PostException {
-        User user = userService.findUserProfileByJwt(jwt);
+        // User user = userService.findUserProfileByJwt(jwt);
 
         Post post = postService.findById(postId);
+        User user = userService.findUserById(post.getUser().getId());
 
         PostDto postDto = PostDtoMapper.toPostDto(post, user);
         return new ResponseEntity<>(postDto, HttpStatus.OK);
