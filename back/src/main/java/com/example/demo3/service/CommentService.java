@@ -48,6 +48,8 @@ public interface CommentService {
      */
     public List<Comment> findAllCommentsByPostId(Post post) throws PostException, CommentException;
 
+    public List<Comment> findAllCommentsByPostIdDes(String postId) throws PostException, CommentException;
+
     public List<Comment> findAllCommentsByParentId(String parentId) throws PostException, CommentException;
 
     /**

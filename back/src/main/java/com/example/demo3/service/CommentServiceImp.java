@@ -41,6 +41,7 @@ public class CommentServiceImp implements CommentService {
         comment.setUser(user);
         comment.setPost(content.getPost());
         comment.setCreatedAt(LocalDateTime.now());
+        comment.setVisible(true);
 //        comment.setParentCommentId(content.getPost().getId());
         return commentRepository.save(comment);
     }
@@ -57,6 +58,7 @@ public class CommentServiceImp implements CommentService {
         comment.setPost(postId);
         String posts = postId.getId();
         comment.setParentCommentId(posts);
+        comment.setVisible(true);
         comment.setCreatedAt(LocalDateTime.now());
         return commentRepository.save(comment);
     }
@@ -66,12 +68,12 @@ public class CommentServiceImp implements CommentService {
         // Check if commenting on a post or replying to a comment
         // Commenting on a post
         // Validate post existence
-
         Comment comment = new Comment();
         comment.setCommentText(content.getCommentText());
         comment.setUser(user);
         comment.setPost(postId);
         comment.setParentCommentId(parentComment);
+        comment.setVisible(true);
         comment.setCreatedAt(LocalDateTime.now());
         return commentRepository.save(comment);
     }
@@ -86,6 +88,11 @@ public class CommentServiceImp implements CommentService {
     @Override
     public List<Comment> findAllCommentsByPostId(Post post) throws CommentException {
         return commentRepository.findByPostId(new ObjectId(post.getId()));
+    }
+
+    @Override
+    public List<Comment> findAllCommentsByPostIdDes(String postId) throws CommentException {
+        return commentRepository.findCommentByPostIdOrderByCreatedAtDesc(postId);
     }
 
     @Override
@@ -104,6 +111,7 @@ public class CommentServiceImp implements CommentService {
                 .orElseThrow(() -> new CommentException("Comment with ID " + id + " not found"));
 
         comment.setCommentText("");
+        comment.setVisible(false);
         return commentRepository.save(comment);
     }
 

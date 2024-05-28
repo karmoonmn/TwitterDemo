@@ -32,5 +32,7 @@ public class Comment {
     private LocalDateTime CreatedAt;
 
     private String parentCommentId;
+
+    private boolean isVisible;
 }
 
