@@ -63,6 +63,7 @@ public interface CommentService {
     public Comment deleteComment(String id) throws PostException, UserException, CommentException;
 
     public List<Comment> findAllComments(User user);
+//    public List<Comment> findAllComments(String user);
 
     public Comment findById(String id) throws CommentException;
 }

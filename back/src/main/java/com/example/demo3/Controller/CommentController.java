@@ -89,18 +89,18 @@ public class CommentController {
 
         return new ResponseEntity<>(commentDtos, HttpStatus.OK);
     }
-
-    @GetMapping("/des/{postId}")
-    public ResponseEntity<List<CommentDto>> getAllCommentsByPostIdDes
-            (@PathVariable String postId, @RequestHeader("Authorization") String jwt)
-            throws UserException, PostException, CommentException {
-        User user = userService.findUserProfileByJwt(jwt);
-
-        List<Comment> comments = commentService.findAllCommentsByPostIdDes(postId);
-        List<CommentDto> commentDtos = CommentDtoMapper.toCommentDtos(comments, user);
-
-        return new ResponseEntity<>(commentDtos, HttpStatus.OK);
-    }
+//
+//    @GetMapping("/des/{postId}")
+//    public ResponseEntity<List<CommentDto>> getAllCommentsByPostIdDes
+//            (@PathVariable String postId, @RequestHeader("Authorization") String jwt)
+//            throws UserException, PostException, CommentException {
+//        User user = userService.findUserProfileByJwt(jwt);
+//
+//        List<Comment> comments = commentService.findAllCommentsByPostIdDes(postId);
+//        List<CommentDto> commentDtos = CommentDtoMapper.toCommentDtos(comments, user);
+//
+//        return new ResponseEntity<>(commentDtos, HttpStatus.OK);
+//    }
 
     @GetMapping("/comment/{parentId}")
     public ResponseEntity<List<CommentDto>> getAllCommentsByParentId(@PathVariable String parentId, @RequestHeader("Authorization") String jwt)
@@ -113,11 +113,12 @@ public class CommentController {
         return new ResponseEntity<>(commentDtos, HttpStatus.OK);
     }
 
-    @GetMapping("/")
+    @GetMapping("/user/{userId}")
     public ResponseEntity<List<CommentDto>> getAllCommentsByUser(
+            @PathVariable String userId,
             @RequestHeader("Authorization") String jwt)
-            throws UserException, PostException {
-        User user = userService.findUserProfileByJwt(jwt);
+            throws UserException {
+        User user = userService.findUserById(userId);
 
         List<Comment> comments = commentService.findAllComments(user);
         List<CommentDto> postDtos = CommentDtoMapper.toCommentDtos(comments, user);
