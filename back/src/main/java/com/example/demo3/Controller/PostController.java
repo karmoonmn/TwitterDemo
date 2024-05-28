@@ -136,7 +136,8 @@ public class PostController {
 
     @GetMapping("/user/{userId}")
     public ResponseEntity<List<PostDto>> getUsersAllPosts(
-            String userId, @RequestHeader("Authorization") String jwt)
+            @PathVariable String userId,
+            @RequestHeader("Authorization") String jwt)
             throws UserException, PostException {
         User user = userService.findUserById(userId);
 

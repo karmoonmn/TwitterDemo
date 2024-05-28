@@ -1,8 +1,11 @@
 package com.example.demo3.repo;
 
+import com.example.demo3.model.Comment;
 import com.example.demo3.model.Post;
 import com.example.demo3.model.User;
+import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
 
 import java.util.List;
 import java.util.Set;
