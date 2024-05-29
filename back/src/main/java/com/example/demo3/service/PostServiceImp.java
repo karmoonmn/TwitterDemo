@@ -6,6 +6,7 @@ import com.example.demo3.model.Post;
 import com.example.demo3.model.User;
 import com.example.demo3.repo.PostRepo;
 import com.example.demo3.request.PostReplyRequest;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

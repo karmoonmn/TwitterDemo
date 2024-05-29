@@ -9,6 +9,5 @@ public interface UserRepo extends MongoRepository<User, String> {
 
     public User findByEmail(String email);
 
-//    @Query("{$or:[{'email':{$regex:?0,$options:'i'}},{'fullName':{$regex:?0,$options:'i'}}]}")
     public List<User> searchUserByEmailOrFullName(String searchText);
 }
