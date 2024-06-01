@@ -66,6 +66,8 @@ public interface CommentService {
 //    public List<Comment> findAllComments(String user);
 
     public Comment findById(String id) throws CommentException;
+
+    public long getCommentCountByPostId(String postId);
 }
 
 
