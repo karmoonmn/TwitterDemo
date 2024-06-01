@@ -51,6 +51,7 @@ public class Post {
     private boolean isPost;
 
     private LocalDateTime CreatedAt;
+    private boolean isVisible;
 
     @JsonIgnore
     @DBRef

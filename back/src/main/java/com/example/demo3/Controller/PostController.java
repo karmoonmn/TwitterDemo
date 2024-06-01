@@ -1,6 +1,7 @@
 package com.example.demo3.Controller;
 
 
+import com.example.demo3.DTO.CommentDto;
 import com.example.demo3.DTO.PostDto;
 import com.example.demo3.DTO.UserDto;
 import com.example.demo3.exception.PostException;
@@ -84,6 +85,15 @@ public class PostController {
         res.setMessage("Post deleted successfully");
         res.setStatus(true);
         return new ResponseEntity<>(res, HttpStatus.OK);
+    }
+
+    @PutMapping("/delete/{postId}")
+    public ResponseEntity<PostDto> deletePostBySettingVisible(@PathVariable String postId, @RequestHeader("Authorization") String jwt)
+            throws UserException, PostException {
+        User user = userService.findUserProfileByJwt(jwt);
+        Post post = postService.deletePostBySettingVisible(postId, user.getId());
+        PostDto postDto = PostDtoMapper.toPostDto(post, user);
+        return new ResponseEntity<>(postDto, HttpStatus.OK);
     }
 
     @PostMapping("/create")

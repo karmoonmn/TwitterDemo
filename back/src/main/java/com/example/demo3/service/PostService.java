@@ -31,4 +31,6 @@ public interface PostService {
     public List<Post> findByTag(String tag);
 
     public List<Post> findByText(String text);
+
+    public Post deletePostBySettingVisible(String postId, String userId) throws PostException, UserException;
 }
