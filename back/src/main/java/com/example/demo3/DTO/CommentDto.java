@@ -15,4 +15,5 @@ public class CommentDto {
     private String post;
     private String parentCommentId;
     private LocalDateTime createdAt;
+    private boolean isVisible;
 }

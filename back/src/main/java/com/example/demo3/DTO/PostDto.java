@@ -29,5 +29,5 @@ public class PostDto {
     private List<PostDto> replyPosts;
     private Set<String> tags;
     private List<CommentDto> comments;
-
+    private boolean isVisible;
 }

@@ -24,7 +24,7 @@ public class CommentDtoMapper {
         dto.setUser(user.getId());
         dto.setParentCommentId(comment.getParentCommentId());
         dto.setPost(post.getId());
-
+        dto.setVisible(comment.isVisible());
         return dto;
     }
 

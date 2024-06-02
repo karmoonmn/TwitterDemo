@@ -33,6 +33,7 @@ public class PostServiceImp implements PostService{
         post.setPost(true);
         post.setVideo(req.getVideo());
         post.setTags(req.getTags());
+        post.setVisible(true);
 
         return postRepo.save(post);
     }
@@ -116,5 +117,16 @@ public class PostServiceImp implements PostService{
     @Override
     public List<Post> findByText(String text) {
         return postRepo.findByContentContaining(text);
+    }
+
+    @Override
+    public Post deletePostBySettingVisible(String postId, String userId) throws PostException, UserException {
+        Post post = findById(postId);
+        if (!userId.equals(post.getUser().getId())) {
+            throw new UserException("You can't delete another user's post");
+        }
+        post.setContent("");
+        post.setVisible(false);
+        return postRepo.save(post);
     }
 }

@@ -78,6 +78,10 @@ public class CommentServiceImp implements CommentService {
         return commentRepository.save(comment);
     }
 
+    @Override
+    public long getCommentCountByPostId(String postId) {
+        return commentRepository.countCommentByPostId(postId);
+    }
 
     @Override
     public Comment findById(String id) throws CommentException {
