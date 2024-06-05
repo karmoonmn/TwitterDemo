@@ -124,10 +124,10 @@ public class PostController {
     public ResponseEntity<PostDto> findPostById(
             @PathVariable String postId, @RequestHeader("Authorization") String jwt)
             throws UserException, PostException {
-        // User user = userService.findUserProfileByJwt(jwt);
+        User user = userService.findUserProfileByJwt(jwt);
 
         Post post = postService.findById(postId);
-        User user = userService.findUserById(post.getUser().getId());
+//        User user = userService.findUserById(post.getUser().getId());
 
         PostDto postDto = PostDtoMapper.toPostDto(post, user);
         return new ResponseEntity<>(postDto, HttpStatus.OK);
@@ -147,12 +147,12 @@ public class PostController {
 
     @GetMapping("/user/{userId}")
     public ResponseEntity<List<PostDto>> getUsersAllPosts(
-            @PathVariable String userId,
-            @RequestHeader("Authorization") String jwt)
+            @PathVariable String userId, @RequestHeader("Authorization") String jwt)
             throws UserException, PostException {
-        User user = userService.findUserById(userId);
+        User postUser = userService.findUserById(userId);
+        User user = userService.findUserProfileByJwt(jwt);
 
-        List<Post> posts = postService.getUserPost(user);
+        List<Post> posts = postService.getUserPost(postUser);
         List<PostDto> postDtos = PostDtoMapper.toPostDtos(posts, user);
 
         return new ResponseEntity<>(postDtos, HttpStatus.OK);

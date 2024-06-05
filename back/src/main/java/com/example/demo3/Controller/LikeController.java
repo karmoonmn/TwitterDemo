@@ -42,7 +42,7 @@ public class LikeController {
         return new ResponseEntity<LikeDto>(likeDto, HttpStatus.CREATED);
     }
 
-    @PostMapping("/post/{postId}")
+    @GetMapping("/post/{postId}")
     public ResponseEntity<List<LikeDto>> getAllLikes(
             @PathVariable String postId, @RequestHeader("Authorization") String jwt)
             throws UserException, PostException {

@@ -25,6 +25,7 @@ public class PostDto {
     private boolean isLiked;
     private boolean isRepost;
 
+    private String [] likes;
     private List<String> repostUsersId;
     private List<PostDto> replyPosts;
     private Set<String> tags;
