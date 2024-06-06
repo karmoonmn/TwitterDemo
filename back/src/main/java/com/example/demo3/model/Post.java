@@ -52,10 +52,7 @@ public class Post {
 
     private LocalDateTime CreatedAt;
     private boolean isVisible;
-
-    @JsonIgnore
-    @DBRef
-    private List<Comment> comments = new ArrayList<>();
+    private long commentCount;
 }
 
 

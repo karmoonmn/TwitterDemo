@@ -4,7 +4,6 @@ import com.example.demo3.exception.CommentException;
 import com.example.demo3.exception.PostException;
 import com.example.demo3.exception.UserException;
 import com.example.demo3.model.Comment;
-import com.example.demo3.model.Like;
 import com.example.demo3.model.Post;
 import com.example.demo3.model.User;
 import com.example.demo3.repo.CommentRepo;
@@ -15,9 +14,7 @@ import org.springframework.boot.autoconfigure.web.servlet.error.DefaultErrorView
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class CommentServiceImp implements CommentService {
@@ -60,6 +57,10 @@ public class CommentServiceImp implements CommentService {
         comment.setParentCommentId(posts);
         comment.setVisible(true);
         comment.setCreatedAt(LocalDateTime.now());
+        postId.setCommentCount(commentRepository.countCommentByPostId(postId.getId())+1);
+//        postId.setCommentCount(postId.getCommentCount() + 1);
+        postRepository.save(postId);
+        System.out.println("Updated Comment Count: " + postId.getCommentCount());
         return commentRepository.save(comment);
     }
 

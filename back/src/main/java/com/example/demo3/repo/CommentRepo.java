@@ -1,8 +1,6 @@
 package com.example.demo3.repo;
 
 import com.example.demo3.model.Comment;
-import com.example.demo3.model.Post;
-import com.example.demo3.model.User;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
@@ -26,7 +24,7 @@ public interface CommentRepo extends MongoRepository<Comment, String> {
     @Query("{ 'user' : { $ref: 'users', $id: ?0 } }")
     List<Comment> findByUser(ObjectId user);
 
-    long countCommentByPostId(String postId);
+    int countCommentByPostId(String postId);
 
 //    List<Comment> findByUser(User user);
 

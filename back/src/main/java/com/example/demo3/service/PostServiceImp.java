@@ -4,6 +4,7 @@ import com.example.demo3.exception.PostException;
 import com.example.demo3.exception.UserException;
 import com.example.demo3.model.Post;
 import com.example.demo3.model.User;
+import com.example.demo3.repo.CommentRepo;
 import com.example.demo3.repo.PostRepo;
 import com.example.demo3.request.PostReplyRequest;
 import org.bson.types.ObjectId;
@@ -20,6 +21,9 @@ public class PostServiceImp implements PostService{
     private RecommendationEngine recommendationEngine;
 
     @Autowired
+    private CommentRepo commentRepository;
+
+    @Autowired
     private PostRepo postRepo;
 
     @Override
@@ -34,6 +38,7 @@ public class PostServiceImp implements PostService{
         post.setVideo(req.getVideo());
         post.setTags(req.getTags());
         post.setVisible(true);
+        post.setCommentCount(commentRepository.countCommentByPostId(req.getId()));
 
         return postRepo.save(post);
     }

@@ -30,5 +30,6 @@ public class PostDto {
     private List<PostDto> replyPosts;
     private Set<String> tags;
     private List<CommentDto> comments;
+    private long commentCount;
     private boolean isVisible;
 }
