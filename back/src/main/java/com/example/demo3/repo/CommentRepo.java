@@ -24,7 +24,7 @@ public interface CommentRepo extends MongoRepository<Comment, String> {
     @Query("{ 'user' : { $ref: 'users', $id: ?0 } }")
     List<Comment> findByUser(ObjectId user);
 
-//    int countCommentByPostId(String postId);
+    int countCommentByPostId(String postId);
 
 //    List<Comment> findByUser(User user);
 

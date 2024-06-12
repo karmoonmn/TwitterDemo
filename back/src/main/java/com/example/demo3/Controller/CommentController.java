@@ -91,10 +91,10 @@ public class CommentController {
         return new ResponseEntity<>(commentDtos, HttpStatus.OK);
     }
 
-//    @GetMapping("/count/{postId}")
-//    public long getCommentCount(@PathVariable String postId, @RequestHeader("Authorization") String jwt) {
-//        return commentService.getCommentCountByPostId(postId);
-//    }
+    @GetMapping("/count/{postId}")
+    public long getCommentCount(@PathVariable String postId, @RequestHeader("Authorization") String jwt) {
+        return commentService.getCommentCountByPostId(postId);
+    }
 //
 //    @GetMapping("/des/{postId}")
 //    public ResponseEntity<List<CommentDto>> getAllCommentsByPostIdDes

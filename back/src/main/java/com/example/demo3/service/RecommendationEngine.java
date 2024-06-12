@@ -70,8 +70,13 @@ public class RecommendationEngine {
         int maxWeight = post.getTags().stream()
                 .mapToInt(tag -> tagInterest.getOrDefault(tag, 0))
                 .max()
-                .orElse(1);
-        return maxWeight * post.getLikes().size();
+                .orElse(0);
+        int priority = maxWeight * 2 * post.getLikes().size();
+        if (priority == 0) {
+            return post.getLikes().size();
+        } else {
+            return priority;
+        }
     }
 
 }

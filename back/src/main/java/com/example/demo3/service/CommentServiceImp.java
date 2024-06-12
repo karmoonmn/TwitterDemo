@@ -57,10 +57,10 @@ public class CommentServiceImp implements CommentService {
         comment.setParentCommentId(posts);
         comment.setVisible(true);
         comment.setCreatedAt(LocalDateTime.now());
-//        postId.setCommentCount(commentRepository.countCommentByPostId(postId.getId())+1);
+        postId.setCommentCount(commentRepository.countCommentByPostId(postId.getId())+1);
 //        postId.setCommentCount(postId.getCommentCount() + 1);
         postRepository.save(postId);
-//        System.out.println("Updated Comment Count: " + postId.getCommentCount());
+        System.out.println("Updated Comment Count: " + postId.getCommentCount());
         return commentRepository.save(comment);
     }
 
@@ -79,10 +79,10 @@ public class CommentServiceImp implements CommentService {
         return commentRepository.save(comment);
     }
 
-//    @Override
-//    public long getCommentCountByPostId(String postId) {
-//        return commentRepository.countCommentByPostId(postId);
-//    }
+    @Override
+    public long getCommentCountByPostId(String postId) {
+        return commentRepository.countCommentByPostId(postId);
+    }
 
     @Override
     public Comment findById(String id) throws CommentException {

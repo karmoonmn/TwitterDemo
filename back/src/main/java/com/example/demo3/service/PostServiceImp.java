@@ -38,7 +38,7 @@ public class PostServiceImp implements PostService{
         post.setVideo(req.getVideo());
         post.setTags(req.getTags());
         post.setVisible(true);
-//        post.setCommentCount(commentRepository.countCommentByPostId(req.getId()));
+        post.setCommentCount(commentRepository.countCommentByPostId(req.getId()));
 
         return postRepo.save(post);
     }
