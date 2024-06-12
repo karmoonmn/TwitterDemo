@@ -52,7 +52,7 @@ public class Post {
 
     private LocalDateTime CreatedAt;
     private boolean isVisible;
-    private long commentCount;
+//    private long commentCount;
 }
 
 

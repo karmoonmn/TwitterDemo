@@ -40,7 +40,7 @@ public class PostDtoMapper {
         postDto.setReplyPosts(toPostDtos(post.getReplies(), reqUser));
         postDto.setVideo(post.getVideo());
         postDto.setTags(post.getTags());
-        postDto.setCommentCount(post.getCommentCount());
+//        postDto.setCommentCount(post.getCommentCount());
 
         return postDto;
     }
