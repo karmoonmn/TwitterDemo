@@ -114,7 +114,9 @@ public class CommentServiceImp implements CommentService {
     public Comment deleteComment(String id) throws PostException, UserException, CommentException {
         Comment comment = commentRepository.findById(id)
                 .orElseThrow(() -> new CommentException("Comment with ID " + id + " not found"));
-
+        Post postId = comment.getPost();
+        postId.setCommentCount(commentRepository.countCommentByPostId(postId.getId())-1);
+        postRepository.save(postId);
         comment.setCommentText("");
         comment.setVisible(false);
         return commentRepository.save(comment);
