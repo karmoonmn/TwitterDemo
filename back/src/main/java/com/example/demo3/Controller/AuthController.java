@@ -72,8 +72,11 @@ public class AuthController {
 
         //TODO: user can select tags before sign up, update user tag interest
         Map<String, Integer> tagInterests = new HashMap<>();
-        for (String tag : selectedTags) {
-            tagInterests.put(tag, 1);
+        if (selectedTags != null) {
+
+            for (String tag : selectedTags) {
+                tagInterests.put(tag, 1);
+            }
         }
         System.out.println(tagInterests);
         createdUser.setTagInterests(tagInterests);
